@@ -42,9 +42,26 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var Food = __webpack_require__(1);
+
+	var someFood = new Food();
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
-	
+	function Food(food, calories) {
+	  this.name = name;
+	  this.calories = calories;
+	}
+
+	Food.prototype.edit = function () {
+	  //Some cool storage stuff here
+	};
+
+	module.exports = Food;
 
 /***/ })
 /******/ ]);
