@@ -4,7 +4,8 @@ var assert = chai.assert;
 var Food = require('../lib/food');
 
 describe('Food', function() {
-  context('can create a new food', function() {
-    // Your tests here...
+  context('can get all the foods', function() {
+    let returnedFoods = Food.find(1)
+    assert.equal(returnedFoods[0].name, 'Sweet Baby Ray\'s BBQ')
   });
 });
