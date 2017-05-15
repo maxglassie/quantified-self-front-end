@@ -5,14 +5,23 @@
   <title>Quantified Self - Manage Foods</title>
 </head>
 <body>
-<form action="http://localhost:3000/api/v1/foods/1">
+<div id="form-messages">
+
+</div>
+<form id="food-create", action="http://localhost:3000/api/v1/foods", method="POST">
     <fieldset>
       <legend>Manage Foods</legend>
-      Name:<br>
-      <input type="text" name="name" value="Mickey Mouse"><br>
-      Calories:<br>
-      <input type="text" name="calories" value="500"><br><br>
-      <input type="submit" value="Submit">
+        <div class="field">
+              <label for="name">Name: </label>
+              <input type="text" name="name" placeholder="Mickey Mouse" required><br>
+        </div>
+        <div class="field">
+              <label for="calories">Calories:</label>
+              <input type="integer" name="calories" placeholder="3000" required><br>
+        </div>
+        <div class="field">
+          <button type="submit" value="Submit">Add Food</button>
+        </div>
     </fieldset>
 </form>
 
@@ -32,6 +41,7 @@
   </table>
 
   <script src="main.bundle.js"></script>
+  <script ></script>
   <script>
       function debugFunction(input) {
       }

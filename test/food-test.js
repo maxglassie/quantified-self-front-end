@@ -1,5 +1,6 @@
 var chai = require('chai');
 var assert = chai.assert;
+const $ = require('jquery');
 
 var Food = require('../lib/food');
 
