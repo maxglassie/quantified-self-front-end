@@ -8,16 +8,16 @@
 <div id="form-messages">
 
 </div>
-<form id="food-create", action="http://localhost:3000/api/v1/foods", method="POST">
+<form id="food-create">
     <fieldset>
       <legend>Manage Foods</legend>
         <div class="field">
               <label for="name">Name: </label>
-              <input id="food-name" type="text" name="name" placeholder="Mickey Mouse"><br>
+              <input id="food-name" type="text" name="name" placeholder="Mickey Mouse" required><br>
         </div>
         <div class="field">
               <label for="calories">Calories:</label>
-              <input id="food-calories" type="integer" name="calories" placeholder="3000"><br>
+              <input id="food-calories" type="integer" name="calories" placeholder="3000" required><br>
         </div>
         <div class="field">
           <button id="food-submit" type="submit" value="Submit">Add Food</button>
