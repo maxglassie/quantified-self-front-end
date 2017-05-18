@@ -10324,7 +10324,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	const $ = __webpack_require__(1);
-	const API = 'http://localhost:3000';
+	const API = 'https://quantified-self-be.herokuapp.com';
 
 	class Food {
 	  constructor(name, calories) {
@@ -10368,7 +10368,7 @@
 
 	  var saveFood = function (name, calories) {
 	    var newFood = new Food(name, calories);
-	    $.post('http://localhost:3000/api/v1/foods', newFood).then(function (data) {
+	    $.post('https://quantified-self-be.herokuapp.com/api/v1/foods', newFood).then(function (data) {
 	      prependFood(data.rows[0]);
 	    });
 	  };
@@ -10397,7 +10397,7 @@
 
 	  function removeFood(id) {
 	    $.ajax({
-	      url: 'http://localhost:3000/api/v1/foods/' + id,
+	      url: 'https://quantified-self-be.herokuapp.com/api/v1/foods/' + id,
 	      type: 'DELETE'
 	    });
 	  }
@@ -10410,7 +10410,7 @@
 
 	  function editFood(name, cals, id) {
 	    $.ajax({
-	      url: 'http://localhost:3000/api/v1/foods/' + id,
+	      url: 'https://quantified-self-be.herokuapp.com/api/v1/foods/' + id,
 	      data: { name: name, calories: cals },
 	      type: 'PUT',
 	      success: function () {
